@@ -44,7 +44,7 @@ header {
   width: 25px; height: 25px; margin-right: 5px;
 }
 
-/* 3. 버튼 유틸리티 */
+/* 3. 버튼 공통 */
 .btn {
   display: inline-flex;
   justify-content: center; 
@@ -56,14 +56,14 @@ header {
   text-decoration: none;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   gap: 10px;              /* 로고와 텍스트 사이 10px */
-  letter-spacing: 0.07em;
+  /* letter-spacing: 0.07em; */
 }
 
-/* 대형 버튼 (로그인/회원가입) */
+/* 대형 버튼 */
 .btn_large {
 	width: 135px;        /* 고정 너비 */
-	padding: 0 20px;
 	height: 40px;
+	padding: 0 20px;
 	font-size: 18px;
 	color: #fff;
 	background-color: #348BEE;
@@ -78,7 +78,7 @@ header {
   background-color: #348BEE;
 }
 
-/* 소형 버튼 (중복확인, 인증번호 전송 등) */
+/* 소형 버튼 */
 .btn_small {
   padding: 0 10px; 
   height: 25px;
@@ -99,11 +99,14 @@ header {
 /* 공통 라인(행) 스타일                                              */
 /* ───────────────────────────────────────────────────────────────── */
 .row {
-  display:flex; align-items:center; gap:10px; width:100%;
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+  width:100%;
 }
 
 /* ───────────────────────────────────────────────────────────────── */
-/* 공통 라벨 스타일 (폭 150px × 높이 40px)                           */
+/* 공통 레이블 스타일 (폭 150px × 높이 40px)                           */
 /* ───────────────────────────────────────────────────────────────── */
 .label_item {
   display: flex;                        		/* Flexbox 로 배치 */
@@ -115,10 +118,9 @@ header {
   box-sizing: border-box;               		/* 패딩 포함 박스 모델 */
   background-color: rgba(52,139,238,0.5); 		/* KDL 블루 50% 투명 */
   border-radius: 5px;                   		/* 모서리 둥글게 */
-  font-family: 'NEXON Lv1 Gothic', sans-serif;
   font-size: 18px;                      		/* 폰트 크기 18px */
   color: #666666;                       		/* 폰트 색: 팝업 타이틀과 동일 */
-  letter-spacing: normal;               		/* 팝업 전역 letter-spacing 유지 */
+  /* letter-spacing: normal; */               		/* 팝업 전역 letter-spacing 유지 */
 }
 
 /* 각 글자를 span.char 로 감싼 경우, 블록 아이템으로 표시 */
@@ -137,44 +139,60 @@ header {
   box-sizing: border-box;              /* 패딩 포함 박스 모델 */
   border: 1px solid #348BEE;           /* KDL 블루 테두리 */
   border-radius: 5px;                  /* 모서리 둥글게 */
-  font-family: 'NEXON Lv1 Gothic', sans-serif;
   font-size: 18px;                     /* 텍스트 크기 18px */
   color: #333333;                      /* 입력 텍스트 색 */
   background-color: #FFFFFF;           /* 배경 흰색 */
 }
 
-/* placeholder 스타일 */
-.input_field::placeholder {
-  color: #BDBDBD;                      /* 회색 계열 */
-  opacity: 1;
-}
-
-/* 포커스 시 강조 효과 */
-.input_field:focus {
-  outline: none;
-  border-color: #348BEE;
-  box-shadow: 0 0 5px rgba(52,139,238,0.5);
-}
-
+/* 입력 그룹 */
 .input_field_group {
 	display:flex; 
 	flex-direction:column;
 	gap:10px;
-	width: 100%;      			/* 폼 너비만큼 꽉 채우기 */
+	width: 100%;      					/* 폼 너비만큼 꽉 채우기 */
 	box-sizing: border-box;
 	margin-bottom:30px;
 }
+
+/* placeholder 스타일 */
+/* .input_field::placeholder {
+  color: #BDBDBD;                      회색 계열
+  opacity: 1;
+}
+
+포커스 시 강조 효과
+.input_field:focus {
+  outline: none;
+  border-color: #348BEE;
+  box-shadow: 0 0 5px rgba(52,139,238,0.5);
+} */
 
 /* ───────────────────────────────────────────────────────────────── */
 /* 공통 체크박스 스타일                                              */
 /* ───────────────────────────────────────────────────────────────── */
 .comm_checkbox {
-  appearance:none; width:1.2em; height:1.2em; margin-top:-0.025em;
-  border:1px solid #348BEE; background:#fff; position:relative;
+  appearance:none; 
+  width:1.2em; 
+  height:1.2em; 
+  margin-top:-0.025em;
+  border:1px solid #348BEE; 
+  background:#fff; 
+  position:relative;
 }
 .comm_checkbox::before {
-  content:'✓'; position:absolute; top:50%; left:50%;
-  transform:translate(-50%,-50%); color:#666; font-size:16px;
+  content:'✓'; 
+  position:absolute; 
+  top:50%; 
+  left:50%;
+  transform:translate(-50%,-50%); 
+  color:#666; 
+  font-size:16px;
+}
+
+.checkbox_label { 
+	font-size:15px; 
+	color:#333; 
+	cursor:pointer;
 }
 
 /* 기타 전역 요소들… */

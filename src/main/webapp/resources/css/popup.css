@@ -1,7 +1,7 @@
 /* src/main/webapp/resources/css/popup.css */
 
 /* 공통 팝업 */
-.popup_overlay {
+/* .popup_overlay {
 	position: fixed; 
 	top:0; left:0;
 	width:100%; height:100%;
@@ -15,10 +15,10 @@
 
 .popup_overlay.visible { 
 	display:flex;
-}
+} */
 
 .popup_container {
-	position: relative;
+	/* position: relative; */
 	display: flex;
 	flex-direction: column;
 	row-gap: 10px;           		/* (닫기 버튼과 타이틀) 간격 */
@@ -26,9 +26,9 @@
 	max-width:450px; 
 	/* max-height:90vh; */
 	height:570px;
+	padding:20px; 
 	background:#fff; 
 	border-radius:10px;
-	padding:20px; 
 	box-shadow:0 5px 15px rgba(0,0,0,0.3);
 	overflow-y:auto;
 }
@@ -41,15 +41,16 @@
 }
 .popup_close {
 	position: static;    /* 절대 위치 해제 */
-	align-self: flex-end; /* 오른쪽 정렬 */
+	/* align-self: flex-end; */ /* 오른쪽 정렬 */
 	font-size: 32px; 
 	background:none; 
 	border:none;
-	color: #666666;
+	cursor:pointer;
+	/* color: #666666;
 	cursor:pointer;
 	z-index: 10;
 	padding: 0;
-	margin: 0;           /* gap 에서 간격 처리 */
+	margin: 0;  */          /* gap 에서 간격 처리 */
 } */
 
 /* 팝업 헤더: 타이틀만 */
@@ -62,20 +63,20 @@
   display: flex;
   justify-content: center;   /* 가로 중앙 정렬 */
   /* 닫기와 타이틀 사이를 10px 띄우려면 margin-top 대신 padding-top */
-  padding-top: 0; /* 이미 close-wrap에 만큼 띄워줌 */
+  /* padding-top: 0; */ /* 이미 close-wrap에 만큼 띄워줌 */
   padding-bottom: 50px; /* 타이틀 ↔ 폼 사이 50px */
 }
 
 .popup_title {
-	display: block;       /* 기본적으로 h2는 block이지만, 명시해 주는게 좋음 */
-	margin: 0 auto;       /* 상하 0, 좌우 자동 여백 */
+	/* display: block; */       /* 기본적으로 h2는 block이지만, 명시해 주는게 좋음 */
 	font-size: 24px;
-	font-weight: normal; 
 	color: #666666;
 	text-align: center;			/* 타이틀 중앙정렬 */
+	margin: 0 auto;       		/* 상하 0, 좌우 자동 여백 */
+	/* font-weight: normal; */ 
 }
 
-#loginPopupForm {
+#login_popup_form {
   display: flex;
   flex-direction: column;
   gap: 50px;  /* 입력그룹↔로그인버튼↔찾기그룹 사이 50px */
@@ -94,22 +95,22 @@
   box-sizing: border-box;
 }
 
-.remember_id_group {
+/* .remember_id_group {
   display:flex; align-items:center; gap:5px; margin-top:10px;
 }
 
 .checkbox_label { font-size:15px; color:#333; cursor:pointer; }
 
-/* 찾기/회원가입 링크 */
+찾기/회원가입 링크
 .find_signup_link_group {
   display:flex; flex-direction:column; gap:10px; margin-top:20px;
 }
 
 .find_links {
   display: flex;
-  justify-content: center;  /* 중앙 정렬 */
+  justify-content: center;  중앙 정렬
   align-items: center;
-  gap: 10px;                /* 버튼 사이 + 구분선 사이 */
+  gap: 10px;                버튼 사이 + 구분선 사이
   width: 100%;
 }
 
@@ -126,7 +127,7 @@
 .signup_link img { width:25px; height:25px; }
 
 .signup_link span { font-size:15px; color:#348BEE; }
-
+ */
 
 /* ───────────────────────────────────────────────────────────────── */
 /* 회원가입 팝업                                                     */
