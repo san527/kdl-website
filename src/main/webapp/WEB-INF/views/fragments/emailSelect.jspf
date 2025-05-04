@@ -1,0 +1,11 @@
+<%-- /WEB-INF/views/fragments/emailSelect.jspf --%>
+<%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<div class="email-set">
+  <input type="text" name="memberEmail" class="form_input_field" placeholder="이메일을 입력하십시오." required/>
+  <select name="emailDomain" class="email-select">
+    <option value="gmail.com">@gmail.com</option>
+    <option value="naver.com">@naver.com</option>
+    <option value="daum.net">@daum.net</option>
+    <option value="custom">직접입력</option>
+  </select>
+</div>

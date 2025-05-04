@@ -1,0 +1,254 @@
+/* src/main/webapp/resources/css/popup.css */
+
+/* 팝업 오버레이 */
+.popup_overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup_overlay.visible {
+  display: flex;
+}
+
+/* 팝업 컨테이너 */
+.popup_container {
+  position: relative;
+  width: 90vw;
+  max-width: 450px;
+  max-height: 90vh;
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 20px 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  overflow-y: auto;
+}
+
+/* 팝업 헤더 */
+.popup_header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.popup_close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.popup_title {
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: normal;
+  color: #666666;
+  font-family: 'NEXON Lv1 Gothic', sans-serif;
+}
+
+/* 로그인 폼 */
+#login_popup_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* 입력 그룹 */
+.login_input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.form_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px; height: 40px;
+  background: rgba(52,139,238,0.5);
+  border-radius: 5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.form_label .char {
+  display: block;
+}
+
+.form_input_field {
+  flex: 1 1 auto;
+  height: 40px;
+  padding: 10px 9.5px 10px 10px;
+  border: 1px solid #348BEE;
+  border-radius: 5px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.form_input_field::placeholder {
+  color: #BDBDBD;
+}
+
+.remember_id_group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.form_checkbox {
+  appearance: none;
+  width: 1.2em; height: 1.2em;
+  margin-top: -0.025em;
+  border: 1px solid #348BEE;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.form_checkbox:checked::before {
+  content: '✓';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  color: #666;
+  font-size: 16px;
+}
+
+.form_checkbox_label {
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* 제출버튼(로그인,회원가입) */
+.btn_submit {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 130px; height: 40px;
+  line-height: 40px;
+  margin: 15px auto 50px;
+  background-color: #348BEE;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 찾기 & 회원가입 링크 */
+.find_signup_link_group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.find_links_set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn_find_link {
+  background: none;
+  border: 1px solid #348BEE;
+  border-radius: 30px;
+  width: 110px; height: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333333;
+}
+
+.separator {
+  font-size: 15px;
+  color: #333;
+}
+
+.signup_link_set {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.signup_link_set > span {
+  font-size: 14px;
+}
+
+.signup_with_icon_link {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.signup_with_icon_link img {
+  width: 25px; height: 25px;
+}
+
+.signup_with_icon_link span {
+  font-size: 15px;
+  color: #348BEE;
+}
+
+
+/* popup.css 에 추가/수정 */
+
+/* 1) id-row 레이블 중앙 정렬 + 글자 간격 고정 */
+.member-id-row .form_label {
+  justify-content: center; /* space-between → center */
+  /* gap 을 따로 지정해 줘도 좋습니다: */
+  /* gap: 4px; */
+}
+.member-id-row .form_label .char {
+  /* flex 아이템으로 한 글자씩 묶여있으니 margin 으로 간격 제어 */
+  margin: 0 2px;
+}
+
+/* 2) input 은 flex:1 만 놔두어도 나머지 공간을 채웁니다 */
+.member-id-row .form_input_field {
+  flex: 1 1 auto;
+  /* max-width: calc(100% - 150px - 130px - 20px); */ /* 삭제해도 무방 */
+}
+
+
+
+
+
+
+
+
+
