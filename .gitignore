@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .project
 
 # Maven 빌드 산출물
@@ -11,3 +12,6 @@ target/
 
 # m2e-wtp 플러그인 산출물
 **/m2e-wtp/**
+=======
+.project'target/' 
+>>>>>>> 1b5acba5c6f514303d5ef2a233215a3a364db867
