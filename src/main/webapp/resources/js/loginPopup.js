@@ -1,7 +1,7 @@
 // src/main/webapp/resources/js/loginPopup.js
 document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById('login_popup_overlay');
-  const btnOpen = document.getElementById('btnLoginPopup');
+  const btnOpen = document.getElementById('btnLoginPopup');				// main.jsp
   const btnClose = document.getElementById('close_login_popup');
 
   function open() {
