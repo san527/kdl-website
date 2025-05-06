@@ -1,15 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
   <title>KDL 홈페이지</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+  
   <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/popup.css">
 </head>
+
 <body>
   <header>
     <div class="header_logo">
@@ -29,6 +33,7 @@
       <a href="#" id="btnSignupPopup" class="btn btn_small btn_w80 btn_border_white">회원가입</a>
     </div>
   </header>
+  
   <main><!-- 콘텐츠 --></main>
   <footer><!-- 푸터 --></footer>
 
